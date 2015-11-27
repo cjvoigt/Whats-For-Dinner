@@ -7,22 +7,31 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #import "WFDMeal.h"
 
 @implementation WFDMeal
 
+#pragma mark - Object Life Cycle
+
 - (instancetype) init{
-    return [self initUsingName:nil
-                   withRanking:0
+    self = [self initUsingName:nil
+                   withRanking:nil
                withIngredients:nil
                withDescription:nil
                      withPrice:nil
                   withCalories:nil];
+    
+    if (self){
+        _ingredientsList = [[NSMutableArray alloc] init];
+    }
+    
+    return self;
 }
 
 - (instancetype) initUsingName:(NSString *)mealName{
     return [self initUsingName:mealName
-                   withRanking: nil
+                   withRanking:nil
                withIngredients:nil
                withDescription:nil
                      withPrice:nil
@@ -50,12 +59,14 @@
 {
     self = [super init];
     
-    _mealName = mealName;
-    _mealRanking = mealRanking;
-    _ingredientsList = ingredientsList;
-    _mealDescription = mealDescription;
-    _price = price;
-    _calories = calories;
+    if(self){
+        _mealName = mealName;
+        _mealRanking = mealRanking;
+        _ingredientsList = ingredientsList;
+        _mealDescription = mealDescription;
+        _price = price;
+        _calories = calories;
+    }
     
     return self;
 }

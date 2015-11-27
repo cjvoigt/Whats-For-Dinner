@@ -23,12 +23,11 @@
                    withRanking:(NSDecimalNumber*) mealRanking
                withIngredients: (NSMutableArray*)ingredientsList;
 
-//Default initializer
 - (instancetype) initUsingName:(NSString *)mealName
                    withRanking:(NSDecimalNumber*)mealRanking
                withIngredients:(NSMutableArray *)ingredientsList
                withDescription:(NSString *)mealDescription
                      withPrice:(NSDecimalNumber*)price
-                  withCalories:(NSInteger*)calories;
+                  withCalories:(NSInteger*)calories NS_DESIGNATED_INITIALIZER;
 
 @end

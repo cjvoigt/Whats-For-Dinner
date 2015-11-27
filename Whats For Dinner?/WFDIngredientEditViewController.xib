@@ -2,15 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WFDIngredientEditViewController">
             <connections>
-                <outlet property="caloriesTextBox" destination="cdZ-Ka-avK" id="CAq-gl-Chj"/>
-                <outlet property="descriptionTextBox" destination="bU3-yT-wlJ" id="mcf-i2-KYD"/>
-                <outlet property="nameTextBox" destination="9qE-Ko-19b" id="SIk-W1-jFd"/>
-                <outlet property="priceTextBox" destination="API-xn-Geu" id="2tx-JB-qPt"/>
+                <outlet property="caloriesTextBox" destination="g5C-HG-TiD" id="9dq-35-erg"/>
+                <outlet property="descriptionTextBox" destination="eMt-Gn-riW" id="TyV-Ou-y66"/>
+                <outlet property="nameTextBox" destination="9gl-9U-Xo6" id="Wnm-n6-c8u"/>
+                <outlet property="priceTextBox" destination="5IM-MO-4no" id="lUD-G7-4X3"/>
                 <outlet property="view" destination="iN0-l3-epB" id="mTh-q3-36B"/>
             </connections>
         </placeholder>
@@ -19,138 +18,61 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9qE-Ko-19b">
-                    <rect key="frame" x="155" y="259" width="151" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="151" id="C5V-IG-rmn"/>
-                        <constraint firstAttribute="width" constant="151" id="a3S-5r-Kfh"/>
-                        <constraint firstAttribute="width" constant="151" id="vRP-bS-JQR"/>
-                        <constraint firstAttribute="width" secondItem="9qE-Ko-19b" secondAttribute="height" multiplier="151:30" id="zB4-QA-8B9"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="C5V-IG-rmn"/>
-                            <exclude reference="a3S-5r-Kfh"/>
-                            <exclude reference="vRP-bS-JQR"/>
-                        </mask>
-                    </variation>
-                </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yit-na-DR2">
-                    <rect key="frame" x="43" y="295" width="93" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="yit-na-DR2" secondAttribute="height" multiplier="31:10" id="tp3-Te-ezR"/>
-                    </constraints>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredient Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scp-tU-lnu">
+                    <rect key="frame" x="51" y="170" width="132" height="23"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eG7-Yn-fVh">
-                    <rect key="frame" x="91" y="333" width="45" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="eG7-Yn-fVh" secondAttribute="height" multiplier="3:2" id="NC7-FI-iTf"/>
-                    </constraints>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredient Description:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ug4-R1-LPA">
+                    <rect key="frame" x="7" y="205" width="176" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Df-Fw-fCS">
-                    <rect key="frame" x="68" y="371" width="68" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="6Df-Fw-fCS" secondAttribute="height" multiplier="34:15" id="umJ-KR-2Wo"/>
-                    </constraints>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredient Price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59R-1i-Per">
+                    <rect key="frame" x="54" y="243" width="129" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cdZ-Ka-avK">
-                    <rect key="frame" x="155" y="371" width="151" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="151" id="jbl-gq-7iH"/>
-                    </constraints>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eMt-Gn-riW">
+                    <rect key="frame" x="186" y="205" width="179" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7T-xR-IV2">
-                    <rect key="frame" x="150" y="426" width="114" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="F7T-xR-IV2" secondAttribute="height" multiplier="19:5" id="lr6-F0-z91"/>
-                    </constraints>
-                    <state key="normal" title="Finish Ingredient">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5IM-MO-4no">
+                    <rect key="frame" x="186" y="243" width="179" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g5C-HG-TiD">
+                    <rect key="frame" x="186" y="281" width="179" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5p-HT-ivC">
+                    <rect key="frame" x="149" y="342" width="116" height="52"/>
+                    <state key="normal" title="Add Ingredient">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="addIngredient:" destination="-1" eventType="touchUpInside" id="6SP-Tm-fdw"/>
+                        <action selector="addIngredient:" destination="-1" eventType="touchUpInside" id="mWL-Rm-wb5"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sp-I0-Pmu">
-                    <rect key="frame" x="85" y="259" width="51" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="8sp-I0-Pmu" secondAttribute="height" multiplier="17:10" id="u1f-Nu-AZ1"/>
-                    </constraints>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredient Calories:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3N-7D-S8A">
+                    <rect key="frame" x="34" y="281" width="149" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="API-xn-Geu">
-                    <rect key="frame" x="155" y="333" width="151" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="151" id="D2r-FH-cXW"/>
-                        <constraint firstAttribute="width" secondItem="API-xn-Geu" secondAttribute="height" multiplier="151:30" id="iQc-HX-fKR"/>
-                        <constraint firstAttribute="width" constant="151" id="zYX-eQ-XAe"/>
-                    </constraints>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9gl-9U-Xo6">
+                    <rect key="frame" x="186" y="167" width="179" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="D2r-FH-cXW"/>
-                            <exclude reference="zYX-eQ-XAe"/>
-                        </mask>
-                    </variation>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bU3-yT-wlJ">
-                    <rect key="frame" x="155" y="295" width="151" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="151" id="74x-Oi-9yT"/>
-                        <constraint firstAttribute="width" secondItem="bU3-yT-wlJ" secondAttribute="height" multiplier="151:30" id="ZjF-mi-HeB"/>
-                        <constraint firstAttribute="width" constant="151" id="ys8-3q-c71"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="74x-Oi-9yT"/>
-                            <exclude reference="ys8-3q-c71"/>
-                        </mask>
-                    </variation>
                 </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="API-xn-Geu" firstAttribute="top" secondItem="bU3-yT-wlJ" secondAttribute="bottom" constant="8" id="1VC-Rr-Qcu"/>
-                <constraint firstItem="bU3-yT-wlJ" firstAttribute="top" secondItem="9qE-Ko-19b" secondAttribute="bottom" constant="6" id="3xV-wz-wci"/>
-                <constraint firstAttribute="trailing" secondItem="bU3-yT-wlJ" secondAttribute="trailing" constant="108" id="9ax-65-Tgg"/>
-                <constraint firstItem="8sp-I0-Pmu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="85" id="Bqf-IV-0Em"/>
-                <constraint firstItem="yit-na-DR2" firstAttribute="top" secondItem="8sp-I0-Pmu" secondAttribute="bottom" constant="6" id="CvP-Q1-9w2"/>
-                <constraint firstItem="API-xn-Geu" firstAttribute="leading" secondItem="eG7-Yn-fVh" secondAttribute="trailing" constant="19" id="EyG-vx-DdD"/>
-                <constraint firstItem="6Df-Fw-fCS" firstAttribute="top" secondItem="eG7-Yn-fVh" secondAttribute="bottom" constant="8" id="Icr-ZL-BDF"/>
-                <constraint firstItem="8sp-I0-Pmu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="259" id="K58-aa-GSq"/>
-                <constraint firstAttribute="trailing" secondItem="9qE-Ko-19b" secondAttribute="trailing" constant="108" id="TPQ-L2-kHg"/>
-                <constraint firstItem="9qE-Ko-19b" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="259" id="U9G-wJ-J4I"/>
-                <constraint firstItem="cdZ-Ka-avK" firstAttribute="leading" secondItem="6Df-Fw-fCS" secondAttribute="trailing" constant="19" id="Wom-V9-UTp"/>
-                <constraint firstItem="eG7-Yn-fVh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="91" id="Wz9-zG-45a"/>
-                <constraint firstItem="eG7-Yn-fVh" firstAttribute="top" secondItem="yit-na-DR2" secondAttribute="bottom" constant="8" id="Zs3-EO-Y8l"/>
-                <constraint firstItem="cdZ-Ka-avK" firstAttribute="top" secondItem="API-xn-Geu" secondAttribute="bottom" constant="8" id="fcu-RM-iOt"/>
-                <constraint firstItem="bU3-yT-wlJ" firstAttribute="leading" secondItem="yit-na-DR2" secondAttribute="trailing" constant="19" id="gQ1-nW-tlb"/>
-                <constraint firstItem="9qE-Ko-19b" firstAttribute="leading" secondItem="8sp-I0-Pmu" secondAttribute="trailing" constant="19" id="mSB-Bl-s9v"/>
-                <constraint firstItem="6Df-Fw-fCS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="68" id="oha-2S-E9m"/>
-                <constraint firstItem="F7T-xR-IV2" firstAttribute="top" secondItem="cdZ-Ka-avK" secondAttribute="bottom" constant="25" id="s2d-a4-BnG"/>
-                <constraint firstItem="yit-na-DR2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="43" id="sLw-GR-CLm"/>
-                <constraint firstAttribute="trailing" secondItem="cdZ-Ka-avK" secondAttribute="trailing" constant="108" id="trd-rg-iHf"/>
-                <constraint firstAttribute="bottom" secondItem="6Df-Fw-fCS" secondAttribute="bottom" constant="335" id="umZ-rZ-0LS"/>
-                <constraint firstItem="F7T-xR-IV2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="150" id="z6O-Qt-mgt"/>
-            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
         </view>
     </objects>

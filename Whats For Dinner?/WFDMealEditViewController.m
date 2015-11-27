@@ -30,7 +30,8 @@
 -(void) viewDidLoad{
     [super viewDidLoad];
     
-    _meal = [[WFDMeal alloc] init]; 
+    _meal = [[WFDMeal alloc] init];
+    
     _mealRankingSlider.value = 0.00;
     _mealRankingLabel.text = @"0.0";
 }
@@ -43,7 +44,7 @@
 #pragma mark - Table View Methods
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UIIngredientCell"];
     
     cell.textLabel.text = [self.meal.ingredientsList[indexPath.row] description];
     

@@ -16,6 +16,7 @@
 @property (nonatomic, assign, readwrite) NSInteger ingredientCalories;
 
 - (instancetype) initUsingName: (NSString *)name;
+
 - (instancetype) initUsingName:(NSString *)name
                withDescription:(NSString *)description
                      withPrice:(double)price
